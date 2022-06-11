@@ -1,0 +1,418 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.navbar-container {
+  display: flex;
+  flex-direction: row-reverse;
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  box-shadow: 0 5px 10px 0 #aaa;
+  opacity: 0.85;
+  z-index: 999;
+  justify-content: space-around;
+  background-color: #fff;
+}
+.menu-items {
+  margin-top: 6px;
+  list-style: none;
+  display: flex;
+}
+.menu-items a {
+  color: palevioletred;
+  margin: 4px;
+  text-decoration: none;
+}
+.menu-items a:hover {
+  color: black;
+}
+.showcase-area {
+  background: url("./img/header-image2.jpg");
+  background-size: cover;
+  height: 50vh;
+}
+.showcase-container {
+  color: white;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.btn-primary {
+  border-radius: 24px;
+  background-color: aqua;
+  display: inline-block;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+  align-items: center;
+  text-align: center;
+  padding: 0.2rem;
+  text-transform: uppercase;
+  margin-top: 0.5rem;
+  /* width: 55px; */
+}
+#about {
+  padding: 50px 0px;
+  background-color: #f5f5f7;
+}
+#about .small {
+  font-size: 1rem;
+  color: #666;
+  font-weight: 500;
+}
+.about-text {
+  margin: auto;
+  width: 400px;
+  padding: 12px;
+  transform: translateX(-150%);
+  animation: xyz 1s ease-in-out forwards;
+}
+@keyframes xyz {
+  100% {
+    transform: translate(0);
+  }
+}
+.about-wrapper {
+  display: flex;
+}
+.about-img {
+  display: flex;
+  padding: 30px;
+  transform: translateX(150%);
+  animation: xyx 1s ease-in-out forwards;
+}
+@keyframes xyx {
+  100% {
+    transform: translate(0);
+  }
+}
+
+.about-img img {
+  height: 400px;
+  width: 100%;
+}
+#food {
+  padding: 5rem 0 10rem 0;
+  width: 900px;
+  margin: auto;
+}
+#food h2 {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 400;
+  color: #555;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+.food-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.food-container img {
+  display: block;
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  object-position: center;
+  margin: auto;
+}
+.img-container {
+  margin: 0.1rem;
+  position: relative;
+}
+.img-content {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  text-align: center;
+  opacity: 0;
+  z-index: 2;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease-in-out 0.1s;
+}
+.img-content h3 {
+  color: rgb(255, 252, 252);
+  font-size: 1.5rem;
+}
+
+.img-content a {
+  font-size: 1.2rem;
+}
+.img-container::after {
+  content: "";
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 1;
+  opacity: 0;
+  transform: scaleY(0);
+  transform-origin: 100% 100%;
+  transition: all 0.3s ease-in-out;
+}
+.img-container:hover::after {
+  opacity: 1;
+  transform: scaleY(1);
+}
+.img-container:hover .img-content {
+  opacity: 1;
+  top: 40%;
+}
+.food-menu-heading {
+  font-size: 3rem;
+  text-align: center;
+  color: #666;
+  font-weight: 400;
+}
+
+.food-menu-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.food-menu-container img {
+  display: block;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.food-menu-item {
+  display: flex;
+  flex: 1 1 600px;
+  justify-content: space-evenly;
+  margin-bottom: 3rem;
+}
+.food-description {
+  margin: auto 1.2rem;
+}
+.food-menu-title {
+  font-size: 2rem;
+  font-weight: 300;
+  color: #444;
+}
+.food-description p {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #555;
+}
+.food-description .food-price {
+  color: #117964;
+}
+#testimonials {
+  padding: 5rem 0;
+  background: rgb(243, 243, 243);
+}
+
+.testimonial-title {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 400;
+  color: #555;
+}
+.testimonials-container {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.2rem;
+  padding: 1rem;
+}
+
+.star-rating span {
+  color: #ff9529;
+  /* text-align: center;   since it is a span class ,so we need to use text align to it's div  */
+}
+.star-rating {
+  text-align: center;
+}
+.testimonials-box .testimonial-text {
+  margin: 1rem 0;
+  color: #444;
+}
+.testimonials-box {
+  text-align: center;
+  padding: 1rem;
+}
+
+.customer-detail p {
+  text-align: center;
+  color: #117964;
+}
+.customer-photo img {
+  width: 100px;
+  display: block;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+  margin: auto;
+  text-align: center;
+  align-items: center;
+}
+#contact {
+  padding: 5rem 0;
+  background: rgb(226, 226, 226);
+}
+.contact-container {
+  display: flex;
+  background: white;
+  /* text-align: center; */
+}
+.contact-image {
+  width: 50%;
+}
+
+.contact-image img {
+  display: block;
+  height: 400px;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+}
+.form-conatiner {
+  padding: 1rem;
+  width: 50%;
+  margin: 0 auto;
+}
+.form-conatiner input {
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #ddd;
+  padding: 1rem 0;
+  box-shadow: none;
+  outline: none;
+  margin-bottom: 1rem;
+  color: #444;
+  font-weight: 500;
+}
+.form-conatiner textarea {
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #ddd;
+  padding: 1rem 0;
+}
+.form-conatiner h2 {
+  /* text-align: center; */
+  font-weight: 400;
+  font-size: 2.2rem;
+  color: #444;
+  margin-bottom: 1rem;
+}
+#footer {
+  text-align: center;
+  font-size: 1rem;
+  color: white;
+  padding: 2.5rem;
+  background: rgb(65, 65, 65);
+}
+
+/* ##################mediaquery########## */
+@media (max-width: 768px) {
+  .navbar {
+    opacity: 0.95;
+  }
+  .navbar-container input[type="checkbox"],
+  .navbar-container .hamburger-lines {
+    display: block;
+  }
+  .navbar-container {
+    display: block;
+    position: relative;
+    height: 64px;
+  }
+  .navbar-container input[type="checkbox"] {
+    position: absolute;
+    display: block;
+    height: 32px;
+    width: 40px;
+    top: 20px;
+    left: 20px;
+    z-index: 5;
+    opacity: 0;
+  }
+  .navbar-container .hamburger-lines {
+    display: block;
+    height: 32px;
+    width: 40px;
+    top: 20px;
+    left: 20px;
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .navbar-container .hamburger-lines .line {
+    display: block;
+    height: 4px;
+    width: 100%;
+    border-radius: 10px;
+    background: #333333;
+  }
+  .navbar-container .hamburger-lines .linel {
+    transform-origin: 0% 0%;
+    transition: transform 0.4s ease-in-out;
+  }
+  .navbar-container .hamburger-lines .line2 {
+    transition: transform 0.4s ease-in-out;
+  }
+  .navbar-container .hamburger-lines .line3 {
+    transform-origin: 0% 100%;
+    transition: transform 0.4s ease-in-out;
+  }
+  .navbar .menu-items {
+    padding-top: 100px;
+    background: #fff;
+    height: 100vh;
+    max-width: 300px;
+    transform: translateX (-150%);
+    display: flex;
+    flex-direction: column;
+    margin-left: -40px;
+    padding-left: 50px;
+    transition: transform 0.5s ease-in-out;
+    box-shadow: 5px 0 10px 0 #aaa;
+  }
+
+ 
+  .navbar.menu-items li {
+    margin-bottom: 3rem;
+    font-size: 2rem;
+    font-weight: 500;
+  }
+  .logo {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 3rem;
+  }
+
+  .navbar-container input [type=" checkbox "] :checked ~ .menu-items {
+    transform: translateX (0);
+  }
+  .navbar-container input [type = ' checkbox ' ] :checked.hamburger-lines .linel {
+    transform : rotate ( 45deg ) ;
+    }
+    .navbar-container input [ type = ' checkbox ' ] :checked.hamburger-lines .line2 {
+    transform : scaleY ( 0 ) ;
+    }
+    .navbar-container input [ type = ' checkbox ' ] :checked.hamburger-lines .line3 {
+    transform : rotate ( -45deg ) ;
+    }
+
+
+  
+}
